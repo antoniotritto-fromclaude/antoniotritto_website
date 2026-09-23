@@ -33,7 +33,7 @@ export default function Services() {
                 <h2 className="font-oswald text-4xl font-bold mb-6 tracking-wider uppercase">
                   {service.title}
                 </h2>
-                <p className="text-gray-400 text-sm leading-relaxed mb-8 max-w-xs">
+                <p className="text-gray-400 text-sm leading-relaxed mb-8 max-w-xs text-justify hyphens-auto">
                   {service.description}
                 </p>
                 {isExternal ? (

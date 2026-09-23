@@ -20,7 +20,7 @@ export default function Mission() {
             LA FILOSOFIA
           </h2>
           
-          <div className="space-y-6 text-white/90 text-lg font-light leading-relaxed">
+          <div className="space-y-6 text-white/90 text-lg font-light leading-relaxed text-justify hyphens-auto">
             <p>
               Quando Antonio Tritto ha iniziato la sua carriera nel Private Banking, aveva un obiettivo chiaro: offrire una consulenza che mettesse al centro la persona e i suoi progetti di vita, non solo i numeri.
             </p>

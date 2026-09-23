@@ -37,7 +37,7 @@ export default async function NewsletterPage() {
             NEWSLETTER
           </h1>
           <div className="w-24 h-1 bg-amber-500 mx-auto mb-8"></div>
-          <p className="text-xl text-gray-600 max-w-2xl mx-auto font-light leading-relaxed">
+          <p className="text-xl text-gray-600 max-w-2xl mx-auto font-light leading-relaxed text-justify hyphens-auto">
             Resta aggiornato sulle ultime analisi di mercato, strategie di gestione patrimoniale e consigli esclusivi direttamente dalla mia newsletter su Substack.
           </p>
           
@@ -72,7 +72,7 @@ export default async function NewsletterPage() {
                       {post.title}
                     </h2>
                     
-                    <p className="text-gray-600 text-sm leading-relaxed mb-8 line-clamp-3 font-light">
+                    <p className="text-gray-600 text-sm leading-relaxed mb-8 line-clamp-3 font-light text-justify hyphens-auto">
                       {post.contentSnippet || 'Leggi l\'ultimo aggiornamento sulla mia newsletter ufficiale.'}
                     </p>
                     

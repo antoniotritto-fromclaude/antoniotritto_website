@@ -18,7 +18,7 @@ export default function PrivateBankingServices() {
       icon: <Shield className="w-10 h-10 text-amber-500" />,
     },
     {
-      title: 'Consulenza Fiscale',
+      title: 'Ottimizzazione Fiscale',
       description: 'Monitoraggio costante delle normative per ottimizzare il carico tributario sulle rendite finanziarie e sui trasferimenti di ricchezza.',
       icon: <Landmark className="w-10 h-10 text-amber-500" />,
     },
@@ -42,7 +42,7 @@ export default function PrivateBankingServices() {
             I MIEI SERVIZI
           </h2>
           <div className="w-24 h-1 bg-amber-500 mx-auto"></div>
-          <p className="mt-8 text-xl text-gray-600 max-w-2xl mx-auto font-light">
+          <p className="mt-8 text-xl text-gray-600 max-w-2xl mx-auto font-light text-justify hyphens-auto">
             Soluzioni d&apos;eccellenza costruite intorno alle tue esigenze, per una gestione patrimoniale a 360 gradi.
           </p>
         </div>
@@ -59,7 +59,7 @@ export default function PrivateBankingServices() {
               <h3 className="font-oswald text-2xl font-bold uppercase mb-4 text-navy">
                 {service.title}
               </h3>
-              <p className="text-gray-600 leading-relaxed font-light">
+              <p className="text-gray-600 leading-relaxed font-light text-justify hyphens-auto">
                 {service.description}
               </p>
             </div>

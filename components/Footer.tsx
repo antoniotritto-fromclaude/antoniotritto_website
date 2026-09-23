@@ -50,7 +50,7 @@ export default function Footer() {
                 Private Banker
               </div>
             </div>
-            <p className="text-gray-400 text-sm leading-relaxed max-w-xs">
+            <p className="text-gray-400 text-sm leading-relaxed max-w-xs text-justify hyphens-auto">
               Consulenza finanziaria e gestione patrimoniale d&apos;eccellenza. Proteggi il tuo futuro con un partner di fiducia.
             </p>
           </div>
@@ -74,7 +74,7 @@ export default function Footer() {
           {/* Disclaimer */}
           <div className="flex flex-col items-center md:items-start text-center md:text-left">
             <h3 className="text-xl font-bold uppercase mb-8 tracking-wider">Disclaimer</h3>
-            <p className="text-gray-400 text-sm leading-relaxed">
+            <p className="text-gray-400 text-sm leading-relaxed text-justify hyphens-auto">
               Antonio Tritto - Private Banker. Iscritto Albo OCF dal 2020. P.IVA: 08120320729. Sede Milano, Roma , Bari
             </p>
           </div>

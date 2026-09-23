@@ -52,7 +52,7 @@ export default function LibroPage() {
             <h1 className="font-oswald text-5xl md:text-6xl font-bold uppercase leading-[1.05] mb-4 text-navy">
               RESILIENZA E PROSPERITA&apos; 
             </h1>
-            <p className="text-xl md:text-2xl font-light text-gray-700 mb-8">
+            <p className="text-xl md:text-2xl font-light text-gray-700 mb-8 text-justify hyphens-auto">
               La strada verso il benessere finanziario degli imprenditori
             </p>
 
@@ -60,14 +60,14 @@ export default function LibroPage() {
               Libro &middot; disponibile su Amazon
             </span>
 
-            <p className="text-lg text-gray-700 leading-relaxed mb-6">
+            <p className="text-lg text-gray-700 leading-relaxed mb-6 text-justify hyphens-auto">
               Un libro pensato per accompagnare imprenditori e liberi professionisti attraverso le
               dinamiche più complesse del business moderno: dall&apos;analisi e mitigazione dei
               rischi aziendali alle strategie di pianificazione finanziaria più efficaci,
               dall&apos;ottimizzazione fiscale alla tutela patrimoniale, fino alle delicate sfide del
               passaggio generazionale.
             </p>
-            <p className="text-lg text-gray-700 leading-relaxed mb-10">
+            <p className="text-lg text-gray-700 leading-relaxed mb-10 text-justify hyphens-auto">
               Una guida pratica e operativa, con strumenti concreti e soluzioni applicabili da subito,
               adatta sia alle piccole realtà imprenditoriali che alle società di capitali.
             </p>
@@ -111,7 +111,7 @@ export default function LibroPage() {
                 <div className="shrink-0">{tema.icon}</div>
                 <div>
                   <h3 className="font-oswald text-xl font-bold uppercase mb-3 text-navy">{tema.title}</h3>
-                  <p className="text-gray-600 leading-relaxed font-light">{tema.description}</p>
+                  <p className="text-gray-600 leading-relaxed font-light text-justify hyphens-auto">{tema.description}</p>
                 </div>
               </div>
             ))}
@@ -125,11 +125,11 @@ export default function LibroPage() {
           <h2 className="font-oswald text-4xl md:text-5xl font-bold uppercase mb-8 tracking-tight text-navy">
             A CHI E&apos; RIVOLTO
           </h2>
-          <p className="text-xl text-gray-600 leading-relaxed mb-4">
+          <p className="text-xl text-gray-600 leading-relaxed mb-4 text-justify hyphens-auto">
             A imprenditori e liberi professionisti che vogliono smettere di subire la complessità
             del business e iniziare a governarla.
           </p>
-          <p className="text-xl text-gray-600 leading-relaxed">
+          <p className="text-xl text-gray-600 leading-relaxed text-justify hyphens-auto">
             Che tu guidi una piccola realtà familiare o una società di capitali strutturata,
             troverai un metodo pratico, non teoria astratta.
           </p>

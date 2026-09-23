@@ -33,7 +33,7 @@ export default function About() {
             CHI È ANTONIO TRITTO?
           </h2>
 
-          <div className="space-y-6 text-gray-700 text-lg font-light leading-relaxed">
+          <div className="space-y-6 text-gray-700 text-lg font-light leading-relaxed text-justify hyphens-auto">
             <p>
               Antonio Tritto è un Private Banker con oltre 15 anni di esperienza nel settore della consulenza finanziaria e della gestione patrimoniale.
             </p>

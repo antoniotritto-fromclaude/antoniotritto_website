@@ -64,7 +64,7 @@ export default function Testimonials() {
             ))}
           </div>
 
-          <p className="text-gray-400 italic text-lg leading-relaxed mb-8 min-h-[6rem]">
+          <p className="text-gray-400 italic text-lg leading-relaxed mb-8 min-h-[6rem] text-justify hyphens-auto">
             &ldquo;{current.text}&rdquo;
           </p>
 
