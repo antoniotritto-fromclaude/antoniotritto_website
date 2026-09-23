@@ -8,22 +8,22 @@ const AMAZON_URL = 'https://www.amazon.it/RESILIENZA-PROSPERITA-benessere-finanz
 const temi = [
   {
     title: 'Gestione dei rischi aziendali',
-    description: 'Come riconoscere per tempo i rischi che minacciano un\u2019impresa e costruire strategie concrete per mitigarli, prima che diventino emergenze.',
+    description: 'Come riconoscere per tempo i rischi che minacciano un\'impresa e costruire strategie concrete per mitigarli, prima che diventino emergenze.',
     icon: <ShieldAlert className="w-10 h-10 text-amber-500" />,
   },
   {
     title: 'Pianificazione finanziaria',
-    description: 'Le strategie pi\u00f9 efficaci per organizzare le risorse dell\u2019azienda e della famiglia imprenditoriale, con un metodo pratico e replicabile.',
+    description: 'Le strategie più efficaci per organizzare le risorse dell\'azienda e della famiglia imprenditoriale, con un metodo pratico e replicabile.',
     icon: <PiggyBank className="w-10 h-10 text-amber-500" />,
   },
   {
     title: 'Ottimizzazione fiscale e tutela del patrimonio',
-    description: 'Strumenti concreti per alleggerire il carico fiscale e proteggere quanto costruito nel tempo, dentro e fuori dall\u2019azienda.',
+    description: 'Strumenti concreti per alleggerire il carico fiscale e proteggere quanto costruito nel tempo, dentro e fuori dall\'azienda.',
     icon: <Landmark className="w-10 h-10 text-amber-500" />,
   },
   {
     title: 'Passaggio generazionale',
-    description: 'Come affrontare uno dei momenti pi\u00f9 delicati nella vita di un\u2019impresa, trasmettendo valore e continuit\u00e0 a chi verr\u00e0 dopo.',
+    description: 'Come affrontare uno dei momenti più delicati nella vita di un\'impresa, trasmettendo valore e continuità a chi verrà dopo.',
     icon: <Users2 className="w-10 h-10 text-amber-500" />,
   },
 ];
@@ -39,7 +39,7 @@ export default function LibroPage() {
           <div className="w-full lg:w-2/5 relative aspect-[1500/1383] max-w-[400px] mx-auto lg:mx-0">
             <Image
               src="/images/libro-cover.jpg"
-              alt="Resilienza e Prosperit\u00e0 - copertina del libro di Antonio Tritto"
+              alt="Resilienza e Prosperità - copertina del libro di Antonio Tritto"
               fill
               className="object-contain"
               sizes="(max-width: 1024px) 80vw, 400px"
@@ -50,7 +50,7 @@ export default function LibroPage() {
           <div className="w-full lg:w-3/5">
             <p className="text-gray-500 uppercase tracking-widest font-medium mb-4">Antonio Tritto</p>
             <h1 className="font-oswald text-5xl md:text-6xl font-bold uppercase leading-[1.05] mb-4 text-navy">
-              Resilienza e Prosperit\u00e0
+              RESILIENZA E PROSPERITA&apos; 
             </h1>
             <p className="text-xl md:text-2xl font-light text-gray-700 mb-8">
               La strada verso il benessere finanziario degli imprenditori
@@ -62,14 +62,14 @@ export default function LibroPage() {
 
             <p className="text-lg text-gray-700 leading-relaxed mb-6">
               Un libro pensato per accompagnare imprenditori e liberi professionisti attraverso le
-              dinamiche pi\u00f9 complesse del business moderno: dall\u2019analisi e mitigazione dei
-              rischi aziendali alle strategie di pianificazione finanziaria pi\u00f9 efficaci,
-              dall\u2019ottimizzazione fiscale alla tutela patrimoniale, fino alle delicate sfide del
+              dinamiche più complesse del business moderno: dall&apos;analisi e mitigazione dei
+              rischi aziendali alle strategie di pianificazione finanziaria più efficaci,
+              dall&apos;ottimizzazione fiscale alla tutela patrimoniale, fino alle delicate sfide del
               passaggio generazionale.
             </p>
             <p className="text-lg text-gray-700 leading-relaxed mb-10">
-              Una guida pratica e operativa, con strumenti concreti e soluzioni applicabili da subito
-              &mdash; adatta sia alle piccole realt\u00e0 imprenditoriali che alle societ\u00e0 di capitali.
+              Una guida pratica e operativa, con strumenti concreti e soluzioni applicabili da subito,
+              adatta sia alle piccole realtà imprenditoriali che alle società di capitali.
             </p>
 
             <div className="flex flex-wrap items-center gap-6 mb-10">
@@ -123,14 +123,14 @@ export default function LibroPage() {
       <section className="py-24 bg-white">
         <div className="max-w-4xl mx-auto px-6 text-center">
           <h2 className="font-oswald text-4xl md:text-5xl font-bold uppercase mb-8 tracking-tight text-navy">
-            A chi \u00e8 rivolto
+            A CHI E&apos; RIVOLTO
           </h2>
           <p className="text-xl text-gray-600 leading-relaxed mb-4">
-            A imprenditori e liberi professionisti che vogliono smettere di subire la complessit\u00e0
+            A imprenditori e liberi professionisti che vogliono smettere di subire la complessità
             del business e iniziare a governarla.
           </p>
           <p className="text-xl text-gray-600 leading-relaxed">
-            Che tu guidi una piccola realt\u00e0 familiare o una societ\u00e0 di capitali strutturata,
+            Che tu guidi una piccola realtà familiare o una società di capitali strutturata,
             troverai un metodo pratico, non teoria astratta.
           </p>
         </div>
@@ -160,7 +160,7 @@ export default function LibroPage() {
       <section className="py-24 bg-[#f8f9fa]">
         <div className="max-w-3xl mx-auto px-6 text-center">
           <h2 className="font-oswald text-3xl md:text-4xl font-bold uppercase mb-6 text-navy">
-            Inizia a costruire resilienza e prosperit\u00e0
+            Inizia a costruire resilienza e prosperità
           </h2>
           <p className="text-lg text-gray-600 mb-10">
             Disponibile su Amazon in formato ebook.
