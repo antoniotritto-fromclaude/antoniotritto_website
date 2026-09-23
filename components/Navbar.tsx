@@ -1,7 +1,7 @@
 'use client';
 
 import Link from 'next/link';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { Menu, X } from 'lucide-react';
 
 const NAV_LINKS = [
@@ -15,6 +15,20 @@ const NAV_LINKS = [
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const onScroll = () => {
+      const isScrolled = window.scrollY > 20;
+      setScrolled(isScrolled);
+      // Se si torna in cima con schermo largo, richiudi il pannello: evita che
+      // resti aperto sotto la navbar completa che riappare.
+      if (!isScrolled) setOpen(false);
+    };
+    onScroll();
+    window.addEventListener('scroll', onScroll, { passive: true });
+    return () => window.removeEventListener('scroll', onScroll);
+  }, []);
 
   return (
     <header className="w-full bg-white border-b border-gray-100 sticky top-0 z-50">
@@ -34,8 +48,10 @@ export default function Navbar() {
 
         {/* Right side */}
         <div className="flex-1 flex items-center justify-between px-6 lg:px-12">
-          {/* Desktop Navigation */}
-          <nav className="hidden lg:flex items-center space-x-8 text-sm font-medium text-gray-800">
+          {/* Desktop Navigation - visibile su schermi larghi solo finche' non si scorre */}
+          <nav
+            className={`${scrolled ? 'hidden' : 'hidden lg:flex'} items-center space-x-8 text-sm font-medium text-gray-800`}
+          >
             {NAV_LINKS.map((link) => (
               <Link key={link.href} href={link.href} className="hover:text-amber-500 transition-colors uppercase">
                 {link.label}
@@ -43,10 +59,10 @@ export default function Navbar() {
             ))}
           </nav>
 
-          {/* Mobile toggle */}
+          {/* Toggle hamburger - sempre visibile su schermi stretti, e anche su schermi larghi appena si scorre */}
           <button
             type="button"
-            className="lg:hidden ml-auto p-2 text-navy"
+            className={`${scrolled ? '' : 'lg:hidden'} ml-auto p-2 text-navy`}
             aria-label={open ? 'Chiudi il menu' : 'Apri il menu'}
             aria-expanded={open}
             onClick={() => setOpen((v) => !v)}
@@ -56,9 +72,9 @@ export default function Navbar() {
         </div>
       </div>
 
-      {/* Mobile Navigation Panel */}
+      {/* Pannello di navigazione a comparsa */}
       {open && (
-        <nav className="lg:hidden flex flex-col bg-white border-t border-gray-100 px-6 py-6 space-y-1">
+        <nav className="flex flex-col bg-white border-t border-gray-100 px-6 py-6 space-y-1">
           {NAV_LINKS.map((link) => (
             <Link
               key={link.href}
