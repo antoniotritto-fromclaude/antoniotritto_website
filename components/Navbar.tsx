@@ -1,0 +1,76 @@
+'use client';
+
+import Link from 'next/link';
+import { useState } from 'react';
+import { Menu, X } from 'lucide-react';
+
+const NAV_LINKS = [
+  { href: '/#about', label: 'ANTONIO' },
+  { href: '/#filosofia', label: 'LA FILOSOFIA' },
+  { href: '/#servizi', label: 'SERVIZI' },
+  { href: '/libro', label: 'LIBRO' },
+  { href: '/newsletter', label: 'NEWSLETTER' },
+  { href: '/#contatti', label: 'CONTATTI' },
+];
+
+export default function Navbar() {
+  const [open, setOpen] = useState(false);
+
+  return (
+    <header className="w-full bg-white border-b border-gray-100 sticky top-0 z-50">
+      <div className="flex h-20">
+        {/* Left side - Black Logo Block */}
+        <div className="bg-navy text-white flex items-center justify-end px-6 md:px-10 w-1/4 min-w-[180px] md:min-w-[250px]">
+          <Link href="/" className="flex flex-col items-end group" onClick={() => setOpen(false)}>
+            <div className="text-2xl md:text-4xl tracking-tighter flex items-baseline uppercase leading-none">
+              <span className="font-light">antonio</span>
+              <span className="font-bold">tritto</span>
+            </div>
+            <div className="text-[8px] md:text-[10px] uppercase tracking-[0.3em] text-amber-500 font-bold mt-1 opacity-80 group-hover:opacity-100 transition-opacity">
+              Private Banker
+            </div>
+          </Link>
+        </div>
+
+        {/* Right side */}
+        <div className="flex-1 flex items-center justify-between px-6 lg:px-12">
+          {/* Desktop Navigation */}
+          <nav className="hidden lg:flex items-center space-x-8 text-sm font-medium text-gray-800">
+            {NAV_LINKS.map((link) => (
+              <Link key={link.href} href={link.href} className="hover:text-amber-500 transition-colors uppercase">
+                {link.label}
+              </Link>
+            ))}
+          </nav>
+
+          {/* Mobile toggle */}
+          <button
+            type="button"
+            className="lg:hidden ml-auto p-2 text-navy"
+            aria-label={open ? 'Chiudi il menu' : 'Apri il menu'}
+            aria-expanded={open}
+            onClick={() => setOpen((v) => !v)}
+          >
+            {open ? <X className="w-7 h-7" /> : <Menu className="w-7 h-7" />}
+          </button>
+        </div>
+      </div>
+
+      {/* Mobile Navigation Panel */}
+      {open && (
+        <nav className="lg:hidden flex flex-col bg-white border-t border-gray-100 px-6 py-6 space-y-1">
+          {NAV_LINKS.map((link) => (
+            <Link
+              key={link.href}
+              href={link.href}
+              onClick={() => setOpen(false)}
+              className="py-3 text-base font-medium text-gray-800 uppercase tracking-wide border-b border-gray-50 last:border-0 hover:text-amber-500 transition-colors"
+            >
+              {link.label}
+            </Link>
+          ))}
+        </nav>
+      )}
+    </header>
+  );
+}
