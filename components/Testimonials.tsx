@@ -32,12 +32,7 @@ const reviews = [
 ];
 
 export default function Testimonials() {
-  const videos = [
-    { title: 'Gestione Patrimoniale: Strategie di Successo', id: 'v1' },
-    { title: 'Intervista ad Antonio Tritto sul Mercato', id: 'v2' },
-    { title: 'Pianificazione Successoria: Casi Reali', id: 'v3' },
-    { title: 'Investimenti Sostenibili: Il Futuro', id: 'v4' },
-  ];
+  const video = { title: 'Investimenti, protezione del patrimonio e fiscalità', id: 'ZEE0Y7oya8c' };
 
   const [active, setActive] = useState(0);
 
@@ -49,6 +44,8 @@ export default function Testimonials() {
   }, []);
 
   const current = reviews[active];
+  const [playing, setPlaying] = useState(false);
+  const [thumbFallback, setThumbFallback] = useState(false);
 
   return (
     <section className="bg-navy text-white py-24">
@@ -92,31 +89,47 @@ export default function Testimonials() {
           </div>
         </div>
 
-        {/* Video Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-5xl mx-auto">
-          {videos.map((video, index) => (
-            <div key={index} className="relative aspect-video group cursor-pointer overflow-hidden rounded-lg bg-navy">
-              <Image
-                src={`https://picsum.photos/seed/bankvideo${index}/800/450`}
-                alt={video.title}
-                fill
-                className="object-cover opacity-60 group-hover:opacity-40 transition-opacity"
-                referrerPolicy="no-referrer"
+        {/* Video */}
+        <div className="max-w-2xl mx-auto">
+          <div className="relative aspect-video overflow-hidden rounded-lg bg-navy">
+            {playing ? (
+              <iframe
+                src={`https://www.youtube-nocookie.com/embed/${video.id}?autoplay=1`}
+                title={video.title}
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+                className="absolute inset-0 w-full h-full"
               />
-              <div className="absolute inset-0 flex flex-col items-center justify-center">
-                <div className="w-16 h-16 bg-red-600 rounded-full flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform">
-                  <Play className="w-8 h-8 text-white fill-current" />
+            ) : (
+              <button
+                type="button"
+                onClick={() => setPlaying(true)}
+                aria-label={`Riproduci: ${video.title}`}
+                className="relative w-full h-full group cursor-pointer"
+              >
+                <Image
+                  src={`https://img.youtube.com/vi/${video.id}/${thumbFallback ? 'hqdefault' : 'maxresdefault'}.jpg`}
+                  alt={video.title}
+                  fill
+                  className="object-cover opacity-70 group-hover:opacity-50 transition-opacity"
+                  referrerPolicy="no-referrer"
+                  onError={() => setThumbFallback(true)}
+                />
+                <div className="absolute inset-0 flex flex-col items-center justify-center">
+                  <div className="w-16 h-16 bg-red-600 rounded-full flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform">
+                    <Play className="w-8 h-8 text-white fill-current" />
+                  </div>
+                  <p className="mt-4 text-sm font-medium px-4 text-center">{video.title}</p>
                 </div>
-                <p className="mt-4 text-sm font-medium px-4">{video.title}</p>
-              </div>
-              <div className="absolute top-4 left-4 flex items-center space-x-2">
-                <div className="w-8 h-8 rounded-full bg-gray-800 overflow-hidden">
-                  <Image src="https://picsum.photos/seed/tritto-avatar/50/50" alt="Avatar" width={32} height={32} />
+                <div className="absolute top-4 left-4 flex items-center space-x-2">
+                  <div className="w-8 h-8 rounded-full bg-gray-800 overflow-hidden">
+                    <Image src="https://picsum.photos/seed/tritto-avatar/50/50" alt="Avatar" width={32} height={32} />
+                  </div>
+                  <span className="text-xs font-semibold">Antonio Tritto</span>
                 </div>
-                <span className="text-xs font-semibold">Antonio Tritto</span>
-              </div>
-            </div>
-          ))}
+              </button>
+            )}
+          </div>
         </div>
       </div>
     </section>
