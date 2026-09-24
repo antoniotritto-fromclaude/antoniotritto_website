@@ -9,9 +9,9 @@ export default function About() {
   ];
 
   const results = [
-    'Di famiglie a pianificare il proprio futuro finanziario con serenità',
-    'Di imprenditori a gestire la liquidità aziendale e il passaggio generazionale',
-    'Di professionisti a proteggere il proprio patrimonio',
+    'Famiglie a pianificare il proprio futuro finanziario con serenità',
+    'Imprenditori a proteggere il proprio patrimonio e il passaggio generazionale',
+    'Professionisti a gestire e accrescere il proprio patrimonio',
   ];
 
   return (
@@ -35,13 +35,13 @@ export default function About() {
 
           <div className="space-y-6 text-gray-700 text-lg font-light leading-relaxed text-justify hyphens-auto">
             <p>
-              Antonio Tritto è Private Banker, con oltre 10 anni di esperienza nel mondo bancario e finanziario. Da 6 anni opera all&apos;interno di una primaria realtà multinazionale della gestione del risparmio, mettendo la propria competenza al servizio di famiglie, imprenditori e liberi professionisti.
+              Antonio Tritto è un Private Banker, con oltre 10 anni di esperienza nel mondo bancario e finanziario. Da oltre 6 anni opera all&apos;interno di una importante multinazionale italiana della gestione del risparmio, mettendo la propria competenza al servizio di famiglie, imprenditori e liberi professionisti.
             </p>
             <p>
-              La sua carriera è caratterizzata da un approccio analitico e personalizzato, volto a costruire relazioni di fiducia durature con i propri clienti, basate sulla trasparenza e sull&apos;eccellenza dei risultati.
+              La sua carriera è caratterizzata da un approccio olistico, volto a costruire relazioni di fiducia durature con i propri clienti, basate sulla trasparenza e sul perseguimento di propri obiettivi.
             </p>
             <p>
-              Specializzato in Wealth Management, Antonio aiuta i propri clienti a navigare la complessità dei mercati finanziari, offrendo soluzioni su misura che integrano protezione, crescita e pianificazione del futuro.
+              Specializzato in Private Markets, Antonio aiuta i propri clienti ad affrontare la complessità dei mercati finanziari, offrendo soluzioni su misura che integrano protezione, crescita e pianificazione del patrimonio nel futuro.
             </p>
           </div>
         </div>
@@ -66,7 +66,7 @@ export default function About() {
         {/* Row 2, right: carriera box */}
         <div className="bg-gray-50 p-8 rounded-xl border border-gray-100">
           <h3 className="font-oswald text-2xl font-bold uppercase mb-6 tracking-tight text-navy">
-            NELLA MIA CARRIERA HO SUPPORTATO CENTINAIA:
+            NEL CORSO DELLA MIA CARRIERA HO SUPPORTATO CENTINAIA DI:
           </h3>
           <ul className="space-y-4">
             {results.map((result, index) => (
