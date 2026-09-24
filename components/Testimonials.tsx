@@ -1,8 +1,7 @@
 'use client';
 
-import Image from 'next/image';
 import { useEffect, useState } from 'react';
-import { Play, Star } from 'lucide-react';
+import { Gauge, Star } from 'lucide-react';
 
 const reviews = [
   {
@@ -32,8 +31,6 @@ const reviews = [
 ];
 
 export default function Testimonials() {
-  const video = { title: 'Investimenti, protezione del patrimonio e fiscalità', id: 'ZEE0Y7oya8c' };
-
   const [active, setActive] = useState(0);
 
   useEffect(() => {
@@ -44,8 +41,6 @@ export default function Testimonials() {
   }, []);
 
   const current = reviews[active];
-  const [playing, setPlaying] = useState(false);
-  const [thumbFallback, setThumbFallback] = useState(false);
 
   return (
     <section className="bg-navy text-white py-24">
@@ -89,47 +84,18 @@ export default function Testimonials() {
           </div>
         </div>
 
-        {/* Video */}
-        <div className="max-w-2xl mx-auto">
-          <div className="relative aspect-video overflow-hidden rounded-lg bg-navy">
-            {playing ? (
-              <iframe
-                src={`https://www.youtube-nocookie.com/embed/${video.id}?autoplay=1`}
-                title={video.title}
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowFullScreen
-                className="absolute inset-0 w-full h-full"
-              />
-            ) : (
-              <button
-                type="button"
-                onClick={() => setPlaying(true)}
-                aria-label={`Riproduci: ${video.title}`}
-                className="relative w-full h-full group cursor-pointer"
-              >
-                <Image
-                  src={`https://img.youtube.com/vi/${video.id}/${thumbFallback ? 'hqdefault' : 'maxresdefault'}.jpg`}
-                  alt={video.title}
-                  fill
-                  className="object-cover opacity-70 group-hover:opacity-50 transition-opacity"
-                  referrerPolicy="no-referrer"
-                  onError={() => setThumbFallback(true)}
-                />
-                <div className="absolute inset-0 flex flex-col items-center justify-center">
-                  <div className="w-16 h-16 bg-red-600 rounded-full flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform">
-                    <Play className="w-8 h-8 text-white fill-current" />
-                  </div>
-                  <p className="mt-4 text-sm font-medium px-4 text-center">{video.title}</p>
-                </div>
-                <div className="absolute top-4 left-4 flex items-center space-x-2">
-                  <div className="w-8 h-8 rounded-full bg-gray-800 overflow-hidden">
-                    <Image src="https://picsum.photos/seed/tritto-avatar/50/50" alt="Avatar" width={32} height={32} />
-                  </div>
-                  <span className="text-xs font-semibold">Antonio Tritto</span>
-                </div>
-              </button>
-            )}
-          </div>
+        {/* CTA ICEF */}
+        <div className="max-w-2xl mx-auto bg-white/5 border border-white/10 rounded-xl p-10 md:p-12">
+          <Gauge className="w-12 h-12 text-amber-500 mx-auto mb-6" />
+          <h3 className="font-oswald text-2xl md:text-3xl font-bold uppercase mb-8 tracking-tight">
+            Vuoi misurare gratuitamente la tua consapevolezza finanziaria?
+          </h3>
+          <a
+            href="/icef/"
+            className="inline-flex items-center gap-3 bg-gradient-to-b from-[#fde68a] to-[#f59e0b] text-navy px-10 py-4 rounded-md font-bold text-lg shadow-lg hover:scale-105 transition-transform"
+          >
+            Fai il test gratuito
+          </a>
         </div>
       </div>
     </section>

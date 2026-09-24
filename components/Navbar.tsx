@@ -10,6 +10,7 @@ const NAV_LINKS = [
   { href: '/#servizi', label: 'SERVIZI' },
   { href: '/libro', label: 'LIBRO' },
   { href: '/newsletter', label: 'NEWSLETTER' },
+  { href: '/podcast', label: 'PODCAST' },
   { href: '/#contatti', label: 'CONTATTI' },
 ];
 
@@ -59,16 +60,25 @@ export default function Navbar() {
             ))}
           </nav>
 
-          {/* Toggle hamburger - sempre visibile su schermi stretti, e anche su schermi larghi appena si scorre */}
-          <button
-            type="button"
-            className={`${scrolled ? '' : 'lg:hidden'} ml-auto p-2 text-navy`}
-            aria-label={open ? 'Chiudi il menu' : 'Apri il menu'}
-            aria-expanded={open}
-            onClick={() => setOpen((v) => !v)}
-          >
-            {open ? <X className="w-7 h-7" /> : <Menu className="w-7 h-7" />}
-          </button>
+          {/* Toggle hamburger + CTA compatto - visibili quando la navigazione completa e' nascosta */}
+          <div className="flex items-center gap-3 ml-auto">
+            <Link
+              href="#contatti"
+              onClick={() => setOpen(false)}
+              className={`${scrolled ? 'inline-flex' : 'inline-flex lg:hidden'} items-center px-4 py-2 bg-amber-500 text-navy rounded-md font-bold text-xs uppercase tracking-wider hover:bg-amber-400 transition-colors whitespace-nowrap`}
+            >
+              Contattami
+            </Link>
+            <button
+              type="button"
+              className={`${scrolled ? '' : 'lg:hidden'} p-2 text-navy`}
+              aria-label={open ? 'Chiudi il menu' : 'Apri il menu'}
+              aria-expanded={open}
+              onClick={() => setOpen((v) => !v)}
+            >
+              {open ? <X className="w-7 h-7" /> : <Menu className="w-7 h-7" />}
+            </button>
+          </div>
         </div>
       </div>
 
