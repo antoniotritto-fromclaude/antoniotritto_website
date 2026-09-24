@@ -34,9 +34,9 @@ export default function Navbar() {
     <header className="w-full bg-white border-b border-gray-100 sticky top-0 z-50">
       <div className="flex h-20">
         {/* Left side - Black Logo Block */}
-        <div className="bg-navy text-white flex items-center justify-end px-6 md:px-10 w-1/4 min-w-[180px] md:min-w-[250px]">
+        <div className="bg-navy text-white flex items-center justify-end px-4 md:px-10 w-1/4 min-w-[180px] md:min-w-[250px]">
           <Link href="/" className="flex flex-col items-end group" onClick={() => setOpen(false)}>
-            <div className="text-2xl md:text-4xl tracking-tighter flex items-baseline uppercase leading-none">
+            <div className="text-lg sm:text-xl md:text-4xl tracking-tighter flex items-baseline uppercase leading-none">
               <span className="font-light">antonio</span>
               <span className="font-bold">tritto</span>
             </div>
