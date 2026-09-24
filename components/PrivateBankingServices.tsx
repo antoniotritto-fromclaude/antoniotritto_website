@@ -1,4 +1,4 @@
-import { Shield, TrendingUp, Users, Landmark, Leaf, Briefcase } from 'lucide-react';
+import { Shield, TrendingUp, Users, Landmark, Lock, Briefcase } from 'lucide-react';
 
 export default function PrivateBankingServices() {
   const services = [
@@ -23,9 +23,9 @@ export default function PrivateBankingServices() {
       icon: <Landmark className="w-10 h-10 text-amber-500" />,
     },
     {
-      title: 'Investimenti ESG',
-      description: 'Selezione di opportunità di investimento che rispettano criteri ambientali, sociali e di governance, per una finanza etica e redditizia.',
-      icon: <Leaf className="w-10 h-10 text-amber-500" />,
+      title: 'Mercati Privati',
+      description: 'Accesso selezionato a fondi di Private Equity e Venture Capital, per diversificare il portafoglio oltre i mercati quotati con un orizzonte di lungo periodo.',
+      icon: <Lock className="w-10 h-10 text-amber-500" />,
     },
     {
       title: 'Corporate Advisory',
