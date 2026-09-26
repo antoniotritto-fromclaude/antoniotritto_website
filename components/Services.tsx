@@ -16,7 +16,7 @@ export default function Services() {
     },
     {
       title: 'CONSULENZA',
-      description: 'Antonio Tritto offre una consulenza indipendente e personalizzata, basata su anni di esperienza nel settore del Private Banking.',
+      description: 'Antonio Tritto offre una consulenza indipendente e personalizzata, basata su anni di esperienza nel settore del Private Banking. Primo colloquio conoscitivo gratuito.',
       linkText: 'PRENOTA UN APPUNTAMENTO',
       linkHref: 'https://calendly.com/antoniotritto/appuntamento?back=1&month=2026-09',
     },

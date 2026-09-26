@@ -1,6 +1,7 @@
 import { Headphones } from 'lucide-react';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
+import PodcastPlayer from '@/components/PodcastPlayer';
 
 const SPOTIFY_URL = 'https://open.spotify.com/show/4KRGoL2cTRxTkk4KYyzfId';
 const SPOTIFY_EMBED_URL = 'https://open.spotify.com/embed/show/4KRGoL2cTRxTkk4KYyzfId?utm_source=generator&theme=0';
@@ -46,15 +47,7 @@ export default function PodcastPage() {
       <section className="pb-24 bg-white">
         <div className="max-w-3xl mx-auto px-6 lg:px-12">
           <div className="rounded-xl overflow-hidden shadow-lg">
-            <iframe
-              src={SPOTIFY_EMBED_URL}
-              title="Company Creators - Il Podcast di Antonio Tritto"
-              width="100%"
-              height="352"
-              allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-              loading="lazy"
-              className="border-0"
-            />
+            <PodcastPlayer embedUrl={SPOTIFY_EMBED_URL} />
           </div>
         </div>
       </section>

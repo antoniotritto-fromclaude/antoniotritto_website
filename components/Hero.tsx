@@ -29,7 +29,7 @@ export default function Hero() {
             Antonio Tritto è un Private Banker, esperto nella gestione patrimoniale e nell&apos;ottimizzazione fiscale.
           </p>
 
-          <div className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto justify-center mb-16">
+          <div className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto justify-center mb-4">
             <Link 
               href="#servizi" 
               className="px-10 py-4 bg-gradient-to-b from-[#6b7280] to-[#374151] text-white rounded-md font-medium text-lg hover:from-[#4b5563] hover:to-[#1f2937] transition-all text-center shadow-md w-full sm:w-auto"
@@ -43,6 +43,10 @@ export default function Hero() {
               Contattami
             </Link>
           </div>
+
+          <p className="text-sm text-gray-600 font-medium mb-16">
+            Primo colloquio conoscitivo gratuito, senza impegno.
+          </p>
 
           {/* Expertise Icons Section */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 w-full max-w-2xl mx-auto mt-4">

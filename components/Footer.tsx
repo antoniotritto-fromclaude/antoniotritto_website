@@ -8,9 +8,12 @@ export default function Footer() {
       <div className="max-w-7xl mx-auto px-6 lg:px-12">
         {/* Contact Section */}
         <div id="contatti" className="mb-24 text-center">
-          <h2 className="font-oswald text-4xl md:text-5xl font-bold uppercase mb-12 tracking-tight">
+          <h2 className="font-oswald text-4xl md:text-5xl font-bold uppercase mb-4 tracking-tight">
             ENTRA IN CONTATTO
           </h2>
+          <p className="text-amber-500 font-medium mb-12">
+            Primo colloquio conoscitivo gratuito, senza impegno.
+          </p>
           <div className="flex flex-col sm:flex-row justify-center gap-6 flex-wrap">
             <a 
               href="mailto:antoniotritto@gmail.com" 
@@ -82,7 +85,12 @@ export default function Footer() {
 
         {/* Copyright Bar */}
         <div className="mt-20 pt-8 border-t border-gray-800 flex flex-col md:flex-row justify-between items-center text-xs text-gray-500 uppercase tracking-widest gap-4">
-          <p>&copy; 2026 Antonio Tritto | Private Banker &ndash; Privacy Policy &ndash; Cookie Policy</p>
+          <p>
+            &copy; 2026 Antonio Tritto | Private Banker &ndash;{' '}
+            <Link href="/privacy-policy" className="hover:text-amber-500 transition-colors">Privacy Policy</Link>
+            {' '}&ndash;{' '}
+            <Link href="/cookie-policy" className="hover:text-amber-500 transition-colors">Cookie Policy</Link>
+          </p>
           <div className="flex items-center gap-2">
             <div className="w-6 h-6 bg-emerald-500 rounded-full flex items-center justify-center">
               <div className="w-2 h-2 bg-white rounded-full"></div>

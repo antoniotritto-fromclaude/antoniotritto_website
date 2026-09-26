@@ -1,5 +1,6 @@
 import type {Metadata} from 'next';
 import localFont from 'next/font/local';
+import CookieConsent from '@/components/CookieConsent';
 import './globals.css';
 
 const inter = localFont({
@@ -29,7 +30,10 @@ export const metadata: Metadata = {
 export default function RootLayout({children}: {children: React.ReactNode}) {
   return (
     <html lang="it" className={`${inter.variable} ${oswald.variable}`}>
-      <body className="font-sans antialiased text-navy" suppressHydrationWarning>{children}</body>
+      <body className="font-sans antialiased text-navy" suppressHydrationWarning>
+        {children}
+        <CookieConsent />
+      </body>
     </html>
   );
 }
