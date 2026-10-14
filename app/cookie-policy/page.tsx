@@ -1,6 +1,13 @@
+import type { Metadata } from 'next';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import CookiePreferencesButton from '@/components/CookiePreferencesButton';
+
+export const metadata: Metadata = {
+  title: 'Cookie Policy',
+  description: 'Informativa sui cookie utilizzati dal sito antoniotritto.com e gestione delle preferenze.',
+  alternates: { canonical: '/cookie-policy' },
+};
 
 export default function CookiePolicyPage() {
   return (

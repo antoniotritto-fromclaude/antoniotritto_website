@@ -1,5 +1,12 @@
+import type { Metadata } from 'next';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
+
+export const metadata: Metadata = {
+  title: 'Privacy Policy',
+  description: 'Informativa sul trattamento dei dati personali del sito antoniotritto.com.',
+  alternates: { canonical: '/privacy-policy' },
+};
 
 export default function PrivacyPolicyPage() {
   return (

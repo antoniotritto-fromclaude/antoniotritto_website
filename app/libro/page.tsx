@@ -1,3 +1,4 @@
+import type { Metadata } from 'next';
 import Image from 'next/image';
 import { ShoppingCart, ShieldAlert, PiggyBank, Landmark, Users2, Star } from 'lucide-react';
 import Navbar from '@/components/Navbar';
@@ -27,6 +28,12 @@ const temi = [
     icon: <Users2 className="w-10 h-10 text-amber-500" />,
   },
 ];
+
+export const metadata: Metadata = {
+  title: 'Il libro Resilienza e Prosperità',
+  description: 'La strada verso il benessere finanziario degli imprenditori: rischi aziendali, pianificazione finanziaria, ottimizzazione fiscale, tutela patrimoniale e passaggio generazionale. Il libro di Antonio Tritto.',
+  alternates: { canonical: '/libro' },
+};
 
 export default function LibroPage() {
   return (

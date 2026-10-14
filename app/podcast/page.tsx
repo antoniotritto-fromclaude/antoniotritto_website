@@ -1,3 +1,4 @@
+import type { Metadata } from 'next';
 import { Headphones } from 'lucide-react';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
@@ -5,6 +6,12 @@ import PodcastPlayer from '@/components/PodcastPlayer';
 
 const SPOTIFY_URL = 'https://open.spotify.com/show/4KRGoL2cTRxTkk4KYyzfId';
 const SPOTIFY_EMBED_URL = 'https://open.spotify.com/embed/show/4KRGoL2cTRxTkk4KYyzfId?utm_source=generator&theme=0';
+
+export const metadata: Metadata = {
+  title: 'Company Creators - Il Podcast',
+  description: 'Il podcast settimanale di Antonio Tritto su imprese, imprenditori e le loro idee: storie, strategie e ispirazione per chi vuole fare impresa.',
+  alternates: { canonical: '/podcast' },
+};
 
 export default function PodcastPage() {
   return (

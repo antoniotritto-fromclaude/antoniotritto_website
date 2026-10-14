@@ -1,0 +1,8 @@
+# Evita che gli indirizzi tecnici di Cloudflare (*.pages.dev) vengano
+# indicizzati da Google come copie duplicate del sito.
+# Non riguarda www.antoniotritto.com.
+https://:project.pages.dev/*
+  X-Robots-Tag: noindex
+
+https://:version.:project.pages.dev/*
+  X-Robots-Tag: noindex

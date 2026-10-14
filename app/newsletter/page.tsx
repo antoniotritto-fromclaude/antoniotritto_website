@@ -1,3 +1,4 @@
+import type { Metadata } from 'next';
 import Parser from 'rss-parser';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
@@ -22,6 +23,12 @@ async function getNewsletterFeed() {
     return [];
   }
 }
+
+export const metadata: Metadata = {
+  title: 'Newsletter',
+  description: 'Analisi di mercato, strategie di gestione patrimoniale e consigli dalla newsletter di Antonio Tritto su Substack.',
+  alternates: { canonical: '/newsletter' },
+};
 
 export default async function NewsletterPage() {
   const posts = await getNewsletterFeed();

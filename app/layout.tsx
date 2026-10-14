@@ -1,6 +1,7 @@
 import type {Metadata} from 'next';
 import localFont from 'next/font/local';
 import CookieConsent from '@/components/CookieConsent';
+import { SITE_URL } from '@/lib/site';
 import './globals.css';
 
 const inter = localFont({
@@ -23,7 +24,11 @@ const oswald = localFont({
 });
 
 export const metadata: Metadata = {
-  title: 'Antonio Tritto - Private Banker',
+  metadataBase: new URL(SITE_URL),
+  title: {
+    default: 'Antonio Tritto - Private Banker',
+    template: '%s | Antonio Tritto',
+  },
   description: 'Antonio Tritto è Private Banker esperto in gestione patrimoniale e consulenza finanziaria personalizzata.',
 };
 
