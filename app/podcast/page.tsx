@@ -3,6 +3,8 @@ import { Headphones } from 'lucide-react';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import PodcastPlayer from '@/components/PodcastPlayer';
+import JsonLd from '@/components/JsonLd';
+import { SITE_URL } from '@/lib/site';
 
 const SPOTIFY_URL = 'https://open.spotify.com/show/4KRGoL2cTRxTkk4KYyzfId';
 const SPOTIFY_EMBED_URL = 'https://open.spotify.com/embed/show/4KRGoL2cTRxTkk4KYyzfId?utm_source=generator&theme=0';
@@ -13,9 +15,22 @@ export const metadata: Metadata = {
   alternates: { canonical: '/podcast' },
 };
 
+const podcastJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'PodcastSeries',
+  name: 'Company Creators - Il Podcast',
+  description:
+    'Il podcast settimanale di Antonio Tritto su imprese, imprenditori e le loro idee: storie, strategie e ispirazione per chi vuole fare impresa.',
+  author: { '@type': 'Person', name: 'Antonio Tritto', url: SITE_URL },
+  inLanguage: 'it',
+  url: `${SITE_URL}/podcast`,
+  sameAs: SPOTIFY_URL,
+};
+
 export default function PodcastPage() {
   return (
     <main className="min-h-screen flex flex-col bg-white">
+      <JsonLd data={podcastJsonLd} />
       <Navbar />
 
       {/* Hero */}

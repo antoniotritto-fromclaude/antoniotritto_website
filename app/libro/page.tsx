@@ -3,6 +3,8 @@ import Image from 'next/image';
 import { ShoppingCart, ShieldAlert, PiggyBank, Landmark, Users2, Star } from 'lucide-react';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
+import JsonLd from '@/components/JsonLd';
+import { SITE_URL } from '@/lib/site';
 
 const AMAZON_URL = 'https://www.amazon.it/RESILIENZA-PROSPERITA-benessere-finanziario-imprenditori-ebook/dp/B0DMK1MBQ6';
 
@@ -35,9 +37,25 @@ export const metadata: Metadata = {
   alternates: { canonical: '/libro' },
 };
 
+const bookJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'Book',
+  name: 'Resilienza e Prosperità',
+  alternativeHeadline: 'La strada verso il benessere finanziario degli imprenditori',
+  description:
+    'Guida pratica per imprenditori e liberi professionisti: analisi e mitigazione dei rischi aziendali, pianificazione finanziaria, ottimizzazione fiscale, tutela patrimoniale e passaggio generazionale.',
+  author: { '@type': 'Person', name: 'Antonio Tritto', url: SITE_URL },
+  inLanguage: 'it',
+  bookFormat: 'https://schema.org/EBook',
+  url: `${SITE_URL}/libro`,
+  image: `${SITE_URL}/images/libro-cover.jpg`,
+  sameAs: AMAZON_URL,
+};
+
 export default function LibroPage() {
   return (
     <main className="min-h-screen flex flex-col bg-white">
+      <JsonLd data={bookJsonLd} />
       <Navbar />
 
       {/* Section 1: Hero */}

@@ -26,10 +26,27 @@ const oswald = localFont({
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
-    default: 'Antonio Tritto - Private Banker',
+    default: 'Private Banker e Consulente Finanziario a Bari | Antonio Tritto',
     template: '%s | Antonio Tritto',
   },
-  description: 'Antonio Tritto è Private Banker esperto in gestione patrimoniale e consulenza finanziaria personalizzata.',
+  description: 'Private Banker Bari e Consulente Finanziario Bari: gestione patrimoniale, successione, fiscalità e mercati privati in Puglia. Primo colloquio gratuito.',
+  openGraph: {
+    type: 'website',
+    locale: 'it_IT',
+    siteName: 'Antonio Tritto - Private Banker',
+    images: [
+      {
+        url: '/images/og-antonio-tritto.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'Antonio Tritto - Private Banker',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    images: ['/images/og-antonio-tritto.jpg'],
+  },
 };
 
 export default function RootLayout({children}: {children: React.ReactNode}) {

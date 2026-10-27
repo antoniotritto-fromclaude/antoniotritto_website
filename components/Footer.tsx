@@ -78,7 +78,7 @@ export default function Footer() {
           <div className="flex flex-col items-center md:items-start text-center md:text-left">
             <h3 className="text-xl font-bold uppercase mb-8 tracking-wider">Disclaimer</h3>
             <p className="text-gray-400 text-sm leading-relaxed text-justify hyphens-auto">
-              Antonio Tritto - Private Banker. Iscritto Albo OCF dal 2020. P.IVA: 08120320729. Sede Milano, Roma , Bari
+              Antonio Tritto - Private Banker e Consulente Finanziario a Bari e in Puglia. Iscritto Albo OCF dal 2020. P.IVA: 08120320729. Sede Milano, Roma, Bari
             </p>
           </div>
         </div>

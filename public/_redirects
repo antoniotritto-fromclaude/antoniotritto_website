@@ -1,0 +1,11 @@
+# Vecchio sito (WordPress): le pagine che non esistono piu' vengono
+# reindirizzate in modo permanente (301) alla pagina equivalente del sito nuovo.
+/home / 301
+/home/ / 301
+/news-2 /newsletter 301
+/news-2/ /newsletter 301
+/finanza /newsletter 301
+/finanza/ /newsletter 301
+/finanza/* /newsletter 301
+/category/* /newsletter 301
+/tag/* /newsletter 301

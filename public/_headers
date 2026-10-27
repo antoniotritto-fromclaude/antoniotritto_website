@@ -6,3 +6,23 @@ https://:project.pages.dev/*
 
 https://:version.:project.pages.dev/*
   X-Robots-Tag: noindex
+
+# File tecnici interni del sito (dati usati per la navigazione veloce tra
+# le pagine). Non sono pagine da mostrare su Google.
+/index.txt
+  X-Robots-Tag: noindex
+
+/libro.txt
+  X-Robots-Tag: noindex
+
+/newsletter.txt
+  X-Robots-Tag: noindex
+
+/podcast.txt
+  X-Robots-Tag: noindex
+
+/privacy-policy.txt
+  X-Robots-Tag: noindex
+
+/cookie-policy.txt
+  X-Robots-Tag: noindex

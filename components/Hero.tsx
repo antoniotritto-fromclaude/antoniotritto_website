@@ -26,7 +26,7 @@ export default function Hero() {
           </h1>
           
           <p className="text-xl md:text-2xl text-gray-800 mb-10 max-w-xl font-light text-justify hyphens-auto">
-            Antonio Tritto è un Private Banker, esperto nella gestione patrimoniale e nell&apos;ottimizzazione fiscale.
+            Antonio Tritto è un Private Banker a Bari, esperto nella gestione patrimoniale e nell&apos;ottimizzazione fiscale.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto justify-center mb-4">
